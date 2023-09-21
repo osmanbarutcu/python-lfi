@@ -4,11 +4,13 @@ base_url = input("Base URL'yi girin: ").strip()
 
 dosya_adi = input("Dosya adını girin: ").strip()
 
-istem = input("POST isteği yapmak için 'P', GET isteği yapmak için 'G' tuşlayın: ").strip().upper()
+istem = input(
+    "POST isteği yapmak için 'P', GET isteği yapmak için 'G' tuşlayın: ").strip().upper()
 
 if istem not in ["P", "G"]:
     print("Geçersiz giriş. 'P' veya 'G' girin.")
     exit()
+
 
 with open(dosya_adi, 'r') as dosya:
     for istek in dosya:
